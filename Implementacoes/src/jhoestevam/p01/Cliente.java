@@ -7,7 +7,7 @@ import java.rmi.registry.Registry;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import br.univel.comum.ServicoRMI;
+import jhoestevam.p01.comum.ServicoRMI;
 
 
 public class Cliente {
