@@ -8,9 +8,9 @@ public class Carro {
 	String modelo;
 	int ano;
 	String cor;
-	float valorDiaria;
+	double valorDiaria;
 
-	public Carro(int id, String placa, String fabricante, String modelo, int ano, String cor, float valorDiaria) {
+	public Carro(int id, String placa, String fabricante, String modelo, int ano, String cor, double valorDiaria) {
 		this.id = id;
 		this.placa = placa;
 		this.fabricante = fabricante;
