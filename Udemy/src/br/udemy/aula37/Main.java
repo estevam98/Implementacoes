@@ -1,5 +1,7 @@
 package br.udemy.aula37;
 
+import java.time.LocalDate;
+
 public class Main {
 	
 	public Main() {
@@ -9,8 +11,10 @@ public class Main {
 	}
 	
 	public void realizarLocacao(int idCarro, int idCliente){
-		Locacao locacao = new Locacao();
-		locacao.idCarro = idCarro;
-		locacao.idCliente = idCliente;
+		Locacao locacao = new Locacao(idCarro, idCliente, 500.00, LocalDate.now(), LocalDate.now().plusDays(5));
+	}
+	
+	private void gerarRelatorio() {
+		
 	}
 }
