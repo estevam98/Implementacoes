@@ -8,6 +8,6 @@ public class Main {
 		myrec.width = 40;
 		myrec.height = 50;
 		
-		System.out.println("MyRec's area is " + myrec.area());
+//		System.out.println("MyRec's area is " + myrec.area());
 	}
 }
