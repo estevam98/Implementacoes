@@ -4,7 +4,7 @@ import java.awt.Rectangle;
 
 public class Main {
 	public static void main(String[] args) {
-		Rectangle myrec;
+		Rectangle myrec = null;
 		myrec.width = 40;
 		myrec.height = 50;
 		
