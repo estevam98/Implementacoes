@@ -5,7 +5,7 @@ public class Main {
 	public static void main(String[] args) {
 		StringBuilder string = new StringBuilder();
 		String nome = "O curso de Java";
-		String avaliacao = "é bom !";
+		String avaliacao = "ï¿½ bom !";
 		
 		string.append(nome);
 		string.append(avaliacao);
