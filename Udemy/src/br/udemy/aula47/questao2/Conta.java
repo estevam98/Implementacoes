@@ -49,7 +49,6 @@ public class Conta {
 		return false;
 	}
 	
-	@SuppressWarnings("unused")
 	private void depositar(double valor) {
 		saldo += valor;
 	}
