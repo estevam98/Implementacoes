@@ -1,4 +1,4 @@
-package br.udemy.aula47;
+package br.udemy.aula47.questao1;
 
 public class Carro {
 	
