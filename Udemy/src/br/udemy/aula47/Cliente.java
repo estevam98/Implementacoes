@@ -11,8 +11,9 @@ public class Cliente {
 	
 	private int nascimento;
 	
-	public Cliente(String nome, String sobrenome, String cpf, String cnh, int nascimento) {
+	public Cliente(long id,String nome, String sobrenome, String cpf, String cnh, int nascimento) {
 		super();
+		this.id = id;
 		this.nome = nome;
 		this.sobrenome = sobrenome;
 		this.cpf = cpf;

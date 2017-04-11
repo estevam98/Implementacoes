@@ -6,7 +6,7 @@ public class SisalucarApp {
 	
 	public static void main(String[] args) {
 		Carro carro = new Carro(001, "BRH-0000", "Volkswagen", "GOL", "Prata", 2017);
-		Cliente cliente = new Cliente("Jhonatan", "Martins", "12354678-90", "XYZ0001", 1998);
+		Cliente cliente = new Cliente(001, "Jhonatan", "Martins", "12354678-90", "XYZ0001", 1998);
 		
 		SisalucarApp sisalucar = new SisalucarApp();
 		
