@@ -7,7 +7,7 @@
 <title>request</title>
 </head>
 <body>
-	
+	<%@ page errorPage="error.jsp" %>
 	<% 
 		StringBuilder string = new StringBuilder();
 		string.append("seu nome:");

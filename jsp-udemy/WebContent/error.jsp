@@ -4,10 +4,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Redirecionando</title>
+<title>Alguma coisa esta errada</title>
 </head>
 <body>
-	<% response.sendRedirect("https://www.google.com.br"); %>
-	<%@ page errorPage="error.jsp" %>
+	<%@ page isErrorPage="true" %>
+	<%= exception %>
+	
+	<h3>Error page</h3>
+	<h5>Você deu alguma informação errada</h5>
 </body>
 </html>

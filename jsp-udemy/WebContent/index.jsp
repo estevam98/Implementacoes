@@ -7,6 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<%@ page errorPage="error.jsp" %>
+	
 	<h2>start web project jhoestevam</h2>
 	
 	<form action="request-nome.jsp">

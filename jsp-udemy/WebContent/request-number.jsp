@@ -7,6 +7,7 @@
 <title>request number</title>
 </head>
 <body>
+	<%@ page errorPage="error.jsp" %>
 	<%!
 		public int calculator(String numberString){
 			int number = Integer.parseInt(numberString);
