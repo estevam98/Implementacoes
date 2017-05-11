@@ -14,5 +14,8 @@
 		string.append(request.getParameter("nome"));
 		out.print(string);
 	%>
+	
+	<h3>tag de expressão</h3>
+	<%= "seu nome:" + request.getParameter("nome") %>
 </body>
 </html>
