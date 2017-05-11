@@ -17,5 +17,6 @@
 	%>
 	
 	<%= calculator(request.getParameter("number")) %>
+	
 </body>
 </html>

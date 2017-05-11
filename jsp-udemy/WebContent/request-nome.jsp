@@ -20,5 +20,6 @@
 	
 	<%= "seu nome:" + request.getParameter("nome") + "seu estado:" + application.getInitParameter("estado") %>
 	
+	<br/>
 </body>
 </html>

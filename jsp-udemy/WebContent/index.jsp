@@ -28,5 +28,10 @@
 	<form action="response-google.jsp">
 		<input type="submit" value="Redirecionar">
 	</form>
+	
+	<jsp:forward page="request-nome.jsp">
+		<jsp:param value="alguma coisa" name="forward"/>
+	</jsp:forward>
+	
 </body>
 </html>
