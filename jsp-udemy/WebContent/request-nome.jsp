@@ -18,7 +18,7 @@
 	<br/>
 	<h3>tag de expressão</h3>
 	
-	<%= "seu nome:" + request.getParameter("nome") %>
+	<%= "seu nome:" + request.getParameter("nome") + "seu estado:" + application.getInitParameter("estado") %>
 	
 </body>
 </html>
