@@ -13,5 +13,12 @@
 		<input type="text" id="nome" name="nome"/>
 		<input type="submit" value="Enviar"/>
 	</form>
+	
+	<br/>
+	
+	<form action="request-number.jsp">
+		<input type="text" id="number" name="number"/>
+		<input type="submit" value="Enviar">
+	</form>
 </body>
 </html>
