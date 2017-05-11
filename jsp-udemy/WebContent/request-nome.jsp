@@ -4,14 +4,15 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>request</title>
 </head>
 <body>
-	<h2>start web project jhoestevam</h2>
 	
-	<form action="">
-		<input type="text" id="nome" name="nome"/>
-		<input type="submit" value="Enviar"/>
-	</form>
+	<% 
+		StringBuilder string = new StringBuilder();
+		string.append("seu nome:");
+		string.append(request.getParameter("nome"));
+		out.print(string);
+	%>
 </body>
 </html>
