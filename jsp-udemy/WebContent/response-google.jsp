@@ -4,21 +4,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>request</title>
+<title>Redirecionando</title>
 </head>
 <body>
-	
-	<% 
-		StringBuilder string = new StringBuilder();
-		string.append("seu nome:");
-		string.append(request.getParameter("nome"));
-		out.print(string);
-	%>
-	
-	<br/>
-	<h3>tag de expressão</h3>
-	
-	<%= "seu nome:" + request.getParameter("nome") %>
-	
+	<% response.sendRedirect("https://www.google.com.br"); %>
 </body>
 </html>

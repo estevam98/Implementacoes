@@ -20,5 +20,11 @@
 		<input type="text" id="number" name="number"/>
 		<input type="submit" value="Enviar">
 	</form>
+	
+	<br/>
+	
+	<form action="response-google.jsp">
+		<input type="submit" value="Redirecionar">
+	</form>
 </body>
 </html>
