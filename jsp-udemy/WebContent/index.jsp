@@ -9,7 +9,7 @@
 <body>
 	<h2>start web project jhoestevam</h2>
 	
-	<form action="">
+	<form action="request-nome.jsp">
 		<input type="text" id="nome" name="nome"/>
 		<input type="submit" value="Enviar"/>
 	</form>
