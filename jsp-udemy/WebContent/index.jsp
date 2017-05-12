@@ -33,5 +33,7 @@
 		<jsp:param value="alguma coisa" name="forward"/>
 	</jsp:forward>
 	
+	
+	<jsp:include page="rodape.jsp"/>
 </body>
 </html>
