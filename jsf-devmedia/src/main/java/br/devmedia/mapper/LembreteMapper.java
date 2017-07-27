@@ -26,7 +26,7 @@ public class LembreteMapper {
 		add(lb);
 	}
 	
-	private List<Lembrete> getLembrete(){
+	public List<Lembrete> getLembrete(){
 		return list;
 	}
 	
