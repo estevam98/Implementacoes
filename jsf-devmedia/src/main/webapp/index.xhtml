@@ -13,5 +13,37 @@
 
 <h:body>
 	<h:outputText value="Ola mundo"></h:outputText>
+	
+	
+	<h:dataTable value="#{lembreteBean.list}" var="lembrete">
+		<h:column>
+			<f:facet name="header">ID</f:facet>
+			#{lembrete.id}
+		</h:column>
+		<h:column>
+			<f:facet name="header">Titulo</f:facet>
+			#{lembrete.titulo}
+		</h:column>
+		<h:column>
+			<f:facet name="header">Descrição</f:facet>
+			#{lembrete.descricao}
+		</h:column>
+		<h:column>
+			<f:facet name="header">Inicio</f:facet>
+			<h:outputText value="#{lembrete.dataInicio.time}">
+				<f:convertDateTime pattern="dd/MM/yyyy"></f:convertDateTime>
+			</h:outputText>
+		</h:column>
+		<h:column>
+			<h:link value="Editar" outcome="editar">
+				<f:param name="lembrete" value="#{lembrete.id}"></f:param>
+			</h:link>
+		</h:column>
+		<h:column>
+			<h:link value="Remover" outcome="remover">
+				<f:param name="lembrete" value="#{lembrete.id}"></f:param>
+			</h:link>
+		</h:column>
+	</h:dataTable>
 </h:body>
 </html>
