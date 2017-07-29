@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:ui="http://java.sun.com/jsf/facelets" 
+      xmlns:h="http://java.sun.com/jsf/html" 
+      xmlns:f="http://java.sun.com/jsf/core">
+
+	<h:head>
+		<title>Adicionar</title>
+	</h:head>
+	
+	<h:body>
+		<h:form>
+			<h:panelGrid columns="3">
+				<h:outputLabel value="Titulo"/>
+				<h:inputText id="titulo" value="#{lembreteBean.lembrete.titulo}" required="true">
+					<f:validateLength minimum="5" maximum="20"/>
+				</h:inputText>
+				<h:message for="titulo"/>
+				
+				<h:outputLabel value="Descrição"/>
+				<h:inputTextarea id="descricao" value="#{lembreteBean.lembrete.descricao}" required="true">
+					<f:validateLength minimum="5" maximum="100"/>
+				</h:inputTextarea>
+				<h:message for="descricao"/>
+				
+				<h:outputText value="Inicio"/>
+				<h:inputText id="data-inicio" value="#{lembreteBean.lembrete.dataInicio}" required="true">
+					<f:convertDateTime pattern="dd/MM/yyyy" timeZone="#{initParam.timezone}"/>
+				</h:inputText>
+				<h:message for="data-inicio"/>
+				
+				<h:commandButton value="Enviar" action="#{lembreteBean.add}"></h:commandButton>
+			</h:panelGrid>
+		</h:form>
+		
+	
+		<h:link value="Voltar" outcome="index"/>
+	</h:body>
+   
+</html>
