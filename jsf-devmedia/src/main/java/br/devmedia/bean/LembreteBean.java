@@ -38,6 +38,30 @@ public class LembreteBean {
 		return "index.xhtml?faces-redirect=true";
 	}
 	
+	public String remove(){
+		mapper.remove(lembrete);
+		
+		lembrete = new Lembrete();
+		
+		FacesContext context = FacesContext.getCurrentInstance();
+		context.addMessage(null, new FacesMessage("Lembrete removido com sucesso !"));
+		context.getExternalContext().getFlash().setKeepMessages(true);
+		
+		return "index.xhtml?faces-redirect=true";
+	}
+	
+	public void findForId(){
+		lembrete = mapper.find(lembrete.getId());
+		
+		if (lembrete == null || lembrete.getId() == 0) {
+			lembrete = new Lembrete();
+			
+			FacesMessage message = new FacesMessage("Lembrete não encontrado.");
+			message.setSeverity(FacesMessage.SEVERITY_ERROR);
+			FacesContext.getCurrentInstance().addMessage(null, message);
+		}
+	}
+	
 	@PostConstruct
 	public void init(){
 		lembrete = new Lembrete();
