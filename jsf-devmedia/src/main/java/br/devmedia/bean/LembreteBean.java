@@ -35,7 +35,7 @@ public class LembreteBean {
 		context.addMessage(null, new FacesMessage("Lembrete adicionado com sucesso !"));
 		context.getExternalContext().getFlash().setKeepMessages(true);
 		
-		return "index.xhtml";
+		return "index.xhtml?faces-redirect=true";
 	}
 	
 	@PostConstruct
