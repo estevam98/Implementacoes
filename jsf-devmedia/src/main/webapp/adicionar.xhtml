@@ -5,12 +5,12 @@
       xmlns:f="http://java.sun.com/jsf/core">
 
 	<h:head>
-		<title>Adicionar</title>
-		<!-- Compiled and minified CSS -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css"/>
 		
-		<!-- Compiled and minified JavaScript -->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+	
+		<title>Adicionar</title>
+		<meta http-equiv="context-Type" content="text/html; chatset=UTF-8"/>   	
 	</h:head>
 	
 	<h:body>
@@ -25,7 +25,7 @@
 					</h:inputText>
 					<h:message for="titulo"/>
 					
-					<h:outputLabel value="Descrição"/>
+					<h:outputLabel value="Descrição"/> 
 					<h:inputTextarea id="descricao" value="#{lembreteBean.lembrete.descricao}" required="true" class="materialize-textarea">
 						<f:validateLength minimum="5" maximum="100"/>
 					</h:inputTextarea>
@@ -37,19 +37,15 @@
 					</h:inputText>
 					<h:message for="data-inicio"/>
 					
+					<h:link value="Voltar" outcome="index"></h:link>
+						
 					<h:commandButton value="Enviar" action="#{lembreteBean.add}" class="btn"></h:commandButton>
 				</h:panelGrid>
 			</h:form>
 		</div>
 		
 		
-		
-	
-		<h:link value="Voltar" outcome="index"/>
-		
-		<!--Import jQuery before materialize.js-->
 		<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 		<script type="text/javascript" src="js/materialize.min.js"></script>
 	</h:body>
-  
 </html>

@@ -6,45 +6,56 @@
 	xmlns:h="http://xmlns.jcp.org/jsf/html"
 	xmlns:f="http://xmlns.jcp.org/jsf/core">
 
-<h:head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-	<title>Home</title>
-</h:head>
-
-<h:body>
-	<h:link value="Novo lembrete" outcome="adicionar"/>
+	<h:head>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css"/>
+		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+			
+		
+		<title>Home</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	</h:head>
 	
-	<h:messages />
-	
-	<h:dataTable value="#{lembreteBean.list}" var="lembrete">
-		<h:column>
-			<f:facet name="header">ID</f:facet>
-			#{lembrete.id}
-		</h:column>
-		<h:column>
-			<f:facet name="header">Titulo</f:facet>
-			#{lembrete.titulo}
-		</h:column>
-		<h:column>
-			<f:facet name="header">Descrição</f:facet>
-			#{lembrete.descricao}
-		</h:column>
-		<h:column>
-			<f:facet name="header">Inicio</f:facet>
-			<h:outputText value="#{lembrete.dataInicio.time}">
-				<f:convertDateTime pattern="dd/MM/yyyy"></f:convertDateTime>
-			</h:outputText>
-		</h:column>
-		<h:column>
-			<h:link value="Editar" outcome="editar">
-				<f:param name="lembrete" value="#{lembrete.id}"></f:param>
-			</h:link>
-		</h:column>
-		<h:column>
-			<h:link value="Remover" outcome="remover">
-				<f:param name="lembrete" value="#{lembrete.id}"></f:param>
-			</h:link>
-		</h:column>
-	</h:dataTable>
-</h:body>
+		<h:body>
+			<h:link value="Novo lembrete" outcome="adicionar"/>
+			
+			<h:messages class="card-panel teal lighten-2" />
+			
+			<h:dataTable class="centered" value="#{lembreteBean.list}" var="lembrete">
+				<h:column>
+					<f:facet name="header">ID</f:facet>
+					#{lembrete.id}
+				</h:column>
+				<h:column>
+					<f:facet name="header">Titulo</f:facet>
+					#{lembrete.titulo}
+				</h:column>
+				<h:column>
+					<f:facet name="header">Descrição</f:facet>
+					#{lembrete.descricao}
+				</h:column>
+				<h:column>
+					<f:facet name="header">Inicio</f:facet>
+					<h:outputText value="#{lembrete.dataInicio.time}">
+						<f:convertDateTime pattern="dd/MM/yyyy"></f:convertDateTime>
+					</h:outputText>
+				</h:column>
+				<h:column>
+					<h:link value="Editar" outcome="editar">
+						<f:param name="lembrete" value="#{lembrete.id}"></f:param>
+					</h:link>
+				</h:column>
+				<h:column>
+					<h:link value="Remover" outcome="remover">
+						<f:param name="lembrete" value="#{lembrete.id}"></f:param>
+					</h:link>
+				</h:column>
+			</h:dataTable>
+			
+			
+			
+			<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+			<script type="text/javascript" src="js/materialize.min.js"></script>	
+		</h:body>
+		
 </html>
