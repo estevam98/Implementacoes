@@ -21,17 +21,23 @@
    
    	<h:body>
    		
-   		<h4>Deseja remover: <h:outputText value="#{lembreteBean.lembrete.titulo}" /></h4>
+   		<div class="row">
+	   		<div class="offset-l3 col l6">
+	   		
+		   		<p>Deseja remover: <h:outputText value="#{lembreteBean.lembrete.titulo}" /></p>
+		   		
+		   		<h:messages />
+		   		
+		   		
+		   		<h:form rendered="#{lembreteBean.lembrete.id != 0}">
+				   	<h:link value="Voltar" outcome="index"></h:link>
+		   		
+		   			<h:commandButton action="#{lembreteBean.remove}" value="Apagar" class="btn red accent-4"/>
+		   		</h:form>
+		   		
+	   		</div>
+   		</div>
    		
-   		<h:messages />
-   		
-   		
-   		<h:form rendered="#{lembreteBean.lembrete.id != 0}">
-   			<h:commandButton action="#{lembreteBean.remove}" value="Apagar" />
-   		</h:form>
-   		
-	   	
-	   	<h:link value="Voltar" outcome="index"></h:link>
 	   	
 		<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 		<script type="text/javascript" src="js/materialize.min.js"></script>	

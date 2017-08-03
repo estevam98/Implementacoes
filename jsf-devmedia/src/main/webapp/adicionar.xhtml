@@ -15,7 +15,6 @@
 	
 	<h:body>
 		
-	
 		<div class="row">
 			<h:form class="offset-l3 col l6">
 				<h:panelGrid columns="3">
@@ -37,12 +36,14 @@
 					</h:inputText>
 					<h:message for="data-inicio"/>
 					
-					<h:link value="Voltar" outcome="index"></h:link>
-						
-					<h:commandButton value="Enviar" action="#{lembreteBean.add}" class="btn"></h:commandButton>
 				</h:panelGrid>
+
+				<h:commandButton value="Enviar" action="#{lembreteBean.add}" class="btn"></h:commandButton>
+			
+				<h:link value="Voltar" outcome="index"></h:link>
 			</h:form>
 		</div>
+		
 		
 		
 		<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>

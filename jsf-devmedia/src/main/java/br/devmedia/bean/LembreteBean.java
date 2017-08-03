@@ -62,6 +62,19 @@ public class LembreteBean {
 		}
 	}
 	
+	public String edit(){
+		mapper.edit(lembrete);
+		
+		lembrete = new Lembrete();
+		
+		FacesContext context = FacesContext.getCurrentInstance();
+		context.addMessage(null, new FacesMessage("Lembrete editado com sucesso !"));
+		context.getExternalContext().getFlash().setKeepMessages(true);
+		
+		
+		return "index.xhtml?faces-redirect=true";
+	}
+	
 	@PostConstruct
 	public void init(){
 		lembrete = new Lembrete();
