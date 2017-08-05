@@ -10,7 +10,11 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
 	
 		<title>Adicionar</title>
-		<meta http-equiv="context-Type" content="text/html; chatset=UTF-8"/>   	
+		<meta http-equiv="context-Type" content="text/html; chatset=UTF-8"/>
+		
+		<f:metadata>
+			<f:event listener="#{lembreteBean.init}" type="preRenderView"></f:event>
+		</f:metadata>   	
 	</h:head>
 	
 	<h:body>
