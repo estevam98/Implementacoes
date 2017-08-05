@@ -19,13 +19,13 @@
 			<h:form class="offset-l3 col l6">
 				<h:panelGrid columns="3">
 					<h:outputLabel value="Titulo"/>
-					<h:inputText id="titulo" value="#{lembreteBean.lembrete.titulo}" required="true">
+					<h:inputText id="titulo" value="#{lembreteBean.lembrete.titulo}" required="true" >
 						<f:validateLength minimum="5" maximum="20"/>
 					</h:inputText>
 					<h:message for="titulo"/>
 					
 					<h:outputLabel value="Descrição"/> 
-					<h:inputTextarea id="descricao" value="#{lembreteBean.lembrete.descricao}" required="true" class="materialize-textarea">
+					<h:inputTextarea id="descricao" value="#{lembreteBean.lembrete.descricao}" required="true" class="materialize-textarea" >
 						<f:validateLength minimum="5" maximum="100"/>
 					</h:inputTextarea>
 					<h:message for="descricao"/>

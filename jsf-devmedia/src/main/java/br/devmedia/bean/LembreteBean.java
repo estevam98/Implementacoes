@@ -50,7 +50,7 @@ public class LembreteBean {
 		return "index.xhtml?faces-redirect=true";
 	}
 	
-	public void findForId(){
+	public void find(){
 		lembrete = mapper.find(lembrete.getId());
 		
 		if (lembrete == null || lembrete.getId() == 0) {
