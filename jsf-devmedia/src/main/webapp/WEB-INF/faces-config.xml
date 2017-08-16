@@ -3,22 +3,21 @@
  xmlns:xi="http://www.w3.org/2001/XInclude"
  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee     http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd">
  <navigation-rule>
- 
   <from-view-id>/*</from-view-id>
-  
   <navigation-case>
    <from-outcome>erro</from-outcome>
    <to-view-id>/error.xhtml</to-view-id>
   </navigation-case>
-  
   <navigation-case>
    <from-outcome>login</from-outcome>
    <to-view-id>/login.xhtml</to-view-id>
   </navigation-case>
-  
+  <navigation-case>
+   <from-action>#{messengerBean.erro()}</from-action>
+   <from-outcome>erro</from-outcome>
+   <to-view-id>/error.xhtml</to-view-id>
+  </navigation-case>
  </navigation-rule>
- 
- 
  <application>
   <locale-config>
    <default-locale>pt_BR</default-locale>
@@ -26,6 +25,4 @@
   </locale-config>
   <message-bundle>Message</message-bundle>
  </application>
- 
- 
 </faces-config>

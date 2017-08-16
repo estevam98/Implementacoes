@@ -10,6 +10,9 @@
     PATH="/error.xhtml" TARGET="rules:#error.xhtml" TITLE="erro" model-entity="JSFProcessItemOutput"/>
    <PROCESS-ITEM-OUTPUT ID="login::#login.xhtml" NAME="output1"
     PATH="/login.xhtml" TARGET="rules:#login.xhtml" TITLE="login" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="erro:#{messengerBean.erro()}:#error.xhtml"
+    NAME="output2" PATH="/error.xhtml" TARGET="rules:#error.xhtml"
+    TITLE="#{messengerBean.erro()}:erro" model-entity="JSFProcessItemOutput"/>
   </PROCESS-ITEM>
  </PROCESS-ITEM>
 </PROCESS>

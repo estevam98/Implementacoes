@@ -27,4 +27,12 @@ public class MessengerBean {
 		
 		return "sobre?faces-redirect=true";
 	}
+	
+	public String erro(){
+		return "erro";
+	}
+	
+	public String login(){
+		return "login";
+	}
 }

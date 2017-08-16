@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+	<h:head>
+		<title>Formulario</title>
+	</h:head> 
+	
+	<h:body>
+		<h:form>
+			<h:messages />
+			
+			<h:panelGrid columns="3">
+			
+				<h:outputLabel value="Nome:" for="nome"/>
+				<h:inputText value="#{validation.nome}" id="nome" required="true"/>
+				<h:message for="nome"/>
+				
+				<h:outputLabel value="Telefone" for="telefone" />
+				<h:inputText value="#{validation.telefone}" id="telefone" required="true"/>
+				<h:message  for="telefone"/>
+				
+				<h:outputLabel value="Email" for="email" />
+				<h:inputText value="#{validation.email}" id="email" required="true"/>
+				<h:message for="email"/>
+				
+				<h:outputLabel value="Nota" for="nota" />
+				<h:inputText value="#{validation.nota}" id="nota" required="true"/>
+				<h:message for="nota"/>
+				
+				
+				<h:commandButton action="#{validation.processaDados()}" value="Enviar" />
+			</h:panelGrid>
+		</h:form>
+	</h:body> 
+</html>
